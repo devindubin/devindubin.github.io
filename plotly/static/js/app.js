@@ -1,7 +1,7 @@
 function init () {
   console.log('init')
   
-  d3.json('../samples.json').then(function (data) {
+  d3.json('samples.json').then(function (data) {
     console.log(data)
     var names = data.names
     var metadata = data.metadata
@@ -32,7 +32,7 @@ function init () {
 function showInfo (sampID) {
   console.log('showinfo')
 
-  d3.json('../samples.json').then(function (data) {
+  d3.json('samples.json').then(function (data) {
     var metadata = data.metadata
     var rlist = metadata.filter(data => data.id == sampID)
     console.log(rlist[0])
@@ -49,7 +49,7 @@ function showInfo (sampID) {
 
 function barChart (sampID) {
   console.log('barchart')
-  d3.json('../samples.json').then(function (data) {
+  d3.json('samples.json').then(function (data) {
     var samples = data.samples
     var rlist = samples.filter(data => data.id == sampID)
     console.log(rlist[0])
@@ -79,7 +79,7 @@ function barChart (sampID) {
 
 function bubbleChart (sampID) {
   console.log('bubbleChart')
-  d3.json('../samples.json').then(function (data) {
+  d3.json('samples.json').then(function (data) {
     var samples = data.samples
     var rlist = samples.filter(data => data.id == sampID)
     console.log(rlist[0])
