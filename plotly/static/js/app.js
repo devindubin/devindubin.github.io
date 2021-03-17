@@ -105,6 +105,6 @@ function bubbleChart (sampID) {
     }
 
     Plotly.newPlot('bubble',[trace],layout)
-  })  
+  })
 };
 init()
